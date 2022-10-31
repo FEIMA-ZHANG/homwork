@@ -13,6 +13,8 @@
             background: red;
             transition: width 2s, height 2s, transform 2s;
             -webkit-transition: width 2s;
+            animation: myfirst 5s;
+            -webkit-animation: myfirst 5s;
             /* Safari */
         }
         
@@ -20,6 +22,15 @@
             width: 200px;
             height: 200px;
             transform: rotate(180deg);
+        }
+        
+         @keyframes myfirst {
+            from {
+                background: red;
+            }
+            to {
+                background: yellow;
+            }
         }
     </style>
 </head>
