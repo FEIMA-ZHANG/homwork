@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(../img/1e2debde-173d-4013-b0ad-7548121bc6bc.jpg);
+        }
+        
+        div {
+            color: white;
+        }
+    </style>
+    <script>
+        function enter() {
+            alert("我来了！");
+        }
+
+        function out() {
+            alert("你写了什么？");
+        }
+        $(document).ready(function() {
+            $("#clike").mousedown(function() {
+                alert("欢迎我的朋友！");
+            });
+        });
+        $(document).ready(function() {
+            $("#levitation").hover(
+                function() {
+                    alert("你好，我的朋友!");
+                },
+                function() {
+                    alert("拜拜! 期待下一次的相遇!");
+                }
+            )
+        });
+    </script>
+</head>
+
+<body>
+    <div onmouseenter="enter(this)" class="adc">鼠标进入时</div>
+    <div onmouseleave="out(this)" class="fc">鼠标离开时</div>
+    <button id="clike">鼠标点击时</button>
+    <button id="levitation">鼠标悬浮时</button>
+</body>
+
+</html>

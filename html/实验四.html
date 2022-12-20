@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: auto;
+            padding: auto;
+        }
+        
+        h2 {
+            width: 100%;
+            text-align: center;
+            /* margin: auto; */
+        }
+        
+        #timeDiv {
+            width: 400px;
+            height: 100px;
+            border-radius: 20px;
+            border: 5px solid black;
+            line-height: 100px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            background-color: green;
+        }
+    </style>
+    <script>
+        var local = setInterval(function() {
+            displayTime()
+        }, 1000)
+
+        function displayTime() {
+            //获取时间
+            var time = new Date().toLocaleString('zh-cn', {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                weekday: "long",
+                hour24: true,
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            })
+            document.getElementById('timeDiv').innerHTML = time
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h2>HTML5 时钟</h2>
+    </header>
+    <div id="timeDiv"></div>
+</body>
+
+</html>
